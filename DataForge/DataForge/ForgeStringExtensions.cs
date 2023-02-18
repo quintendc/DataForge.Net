@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataForge
 {
-    public static class ForgerStringExtensions
+    public static class ForgeStringExtensions
     {
 
         private static Random random = new Random();

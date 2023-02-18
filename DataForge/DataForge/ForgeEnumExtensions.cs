@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataForge
 {
-    public static class ForgerEnumExtensions
+    public static class ForgeEnumExtensions
     {
         public static T GetRandomEnumValue<T>(this T enumeration) where T : struct, Enum
         {
