@@ -1,4 +1,5 @@
 ﻿using DataForge;
+using DataForge.Console;
 
 Console.WriteLine("Random firstname : " + Forger.RandomFirstname());
 Console.WriteLine("Random male firstname : " + Forger.RandomFirstname(DataForgeGenders.Male));
@@ -29,3 +30,6 @@ Console.WriteLine("Random string based on pattern : " + Forger.RandomStringPatte
 ConversionTypes randomEnumValue = ConversionTypes.Numerical.GetRandomEnumValue();
 ConversionTypes type = ForgerUtils.GetRandomEnumValue<ConversionTypes>();
 Console.WriteLine("Random enum value : " + type);
+
+Person person = new Person().CreateBuilder().SetProperty(p => p.FirstName = Forger.RandomFirstname(DataForgeGenders.Male)).Build();
+Console.WriteLine("Person firstname : " + person.FirstName);
