@@ -22,7 +22,7 @@ namespace DataForge
         /// <returns>random string with pattern</returns>
         public static string RandomStringPattern(string pattern, ConversionTypes conversionTypes)
         {
-            return pattern.StringPatternGenerator(conversionTypes);
+            return pattern.RandomStringPatternGenerator(conversionTypes);
         }
     }
 }

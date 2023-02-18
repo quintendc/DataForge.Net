@@ -18,11 +18,11 @@ Console.WriteLine("Random text : " + "".RandomText());
 Console.WriteLine("Random text : " + String.Empty.RandomText(100));
 
 
-Console.WriteLine("Random converion with pattern : " + "##-##".StringPatternGenerator(ConversionTypes.Numerical));
-Console.WriteLine("Random converion with pattern : " + "##-##".StringPatternGenerator(ConversionTypes.Alphabetical));
-Console.WriteLine("Random converion with pattern : " + "##-#######".StringPatternGenerator(ConversionTypes.Both));
+Console.WriteLine("Random converion with pattern : " + "##-##".RandomStringPatternGenerator(ConversionTypes.Numerical));
+Console.WriteLine("Random converion with pattern : " + "##-##".RandomStringPatternGenerator(ConversionTypes.Alphabetical));
+Console.WriteLine("Random converion with pattern : " + "##-#######".RandomStringPatternGenerator(ConversionTypes.Both));
 
-Console.WriteLine("Random Phone number : " + "+32 ## ## ### ###".StringPatternGenerator(ConversionTypes.Numerical));
+Console.WriteLine("Random Phone number : " + "+32 ## ## ### ###".RandomStringPatternGenerator(ConversionTypes.Numerical));
 
 Console.WriteLine("Random string based on pattern : " + ForgeUtils.RandomStringPattern("###-#-###", ConversionTypes.Numerical));
 

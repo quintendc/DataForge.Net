@@ -39,7 +39,7 @@ namespace DataForge
         /// <param name="sourceText">input pattern, every hashtag will be replaced</param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        public static string StringPatternGenerator(this string sourceText, ConversionTypes characterTypes)
+        public static string RandomStringPatternGenerator(this string sourceText, ConversionTypes characterTypes)
         {
             if (string.IsNullOrWhiteSpace(sourceText) || string.IsNullOrEmpty(sourceText))
             {
