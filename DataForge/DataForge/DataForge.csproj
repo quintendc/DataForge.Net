@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>DataForge.Net</Title>
+    <Description>Generate random data for you .net project.</Description>
+    <PackageId>DataForge.Net</PackageId>
   </PropertyGroup>
 
 </Project>

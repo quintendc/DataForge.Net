@@ -31,5 +31,12 @@ ConversionTypes randomEnumValue = ConversionTypes.Numerical.GetRandomEnumValue()
 ConversionTypes type = ForgerUtils.GetRandomEnumValue<ConversionTypes>();
 Console.WriteLine("Random enum value : " + type);
 
-Person person = new Person().CreateBuilder().SetProperty(p => p.FirstName = Forger.RandomFirstname(DataForgeGenders.Male)).Build();
+Person person = new Person().Forge().RuleFor(p => p.FirstName = Forger.RandomFirstname(DataForgeGenders.Male)).Build();
 Console.WriteLine("Person firstname : " + person.FirstName);
+
+Person person1 = new Person().Forge().RuleFor(p => {
+    p.FirstName = Forger.RandomFirstname();
+    p.LastName = Forger.RandomLastname();
+}).Build();
+
+Console.WriteLine($"person 1 : {person1.FirstName} {person1.LastName}");

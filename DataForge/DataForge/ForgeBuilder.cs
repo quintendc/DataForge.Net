@@ -4,16 +4,16 @@ using System.Text;
 
 namespace DataForge
 {
-    public class RuleBuilder<T>
+    public class ForgeBuilder<T>
     {
         private readonly T _instance;
 
-        public RuleBuilder(T instance)
+        public ForgeBuilder(T instance)
         {
             _instance = instance;
         }
 
-        public RuleBuilder<T> SetProperty(Action<T> action)
+        public ForgeBuilder<T> RuleFor(Action<T> action)
         {
             action(_instance);
             return this;
@@ -27,9 +27,9 @@ namespace DataForge
 
     public static class RuleBuilderExtensions
     {
-        public static RuleBuilder<T> CreateBuilder<T>(this T instance)
+        public static ForgeBuilder<T> Forge<T>(this T instance)
         {
-            return new RuleBuilder<T>(instance);
+            return new ForgeBuilder<T>(instance);
         }
     }
 
