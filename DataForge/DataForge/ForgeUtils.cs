@@ -6,6 +6,11 @@ namespace DataForge
 {
     public static class ForgeUtils
     {
+        /// <summary>
+        /// Generate a random value of any enum.
+        /// </summary>
+        /// <typeparam name="T">Enum type</typeparam>
+        /// <returns>Random enum value</returns>
         public static T GetRandomEnumValue<T>() where T : struct, Enum
         {
             var values = Enum.GetValues(typeof(T));
