@@ -40,3 +40,6 @@ Person person1 = new Person().Forge().RuleFor(p => {
 }).Build();
 
 Console.WriteLine($"person 1 : {person1.FirstName} {person1.LastName}");
+
+Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber());
+Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true));

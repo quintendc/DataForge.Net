@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -74,6 +75,37 @@ namespace DataForge
                 return $"{((firstname == "") ? DataStore.randomWords[random.Next(DataStore.randomWords.Length)] : firstname)}." +
                         $"{((lastname == "") ? DataStore.randomWords[random.Next(DataStore.randomWords.Length)] : lastname)}@" +
                         $"{DataStore.emailDomains[random.Next(DataStore.emailDomains.Length)]}";
+            }
+
+            /// <summary>
+            /// Generate a random phone number with the default pattern.
+            /// </summary>
+            /// <param name="pattern">default pattern is: +32 ## ########</param>
+            /// <returns>Random phone number</returns>
+            public static string RandomPhoneNumber(string pattern = "+32 ## ########")
+            {
+                return pattern.RandomStringPatternGenerator(ConversionTypes.Numerical);
+            }
+
+            /// <summary>
+            /// Generate a random phone number.
+            /// </summary>
+            /// <param name="plus">boolean to include leading + symbol</param>
+            /// <param name="countryCode">used country code</param>
+            /// <param name="areaCode">used area code</param>
+            /// <returns>Random phone number</returns>
+            public static string RandomPhoneNumber(bool plus, string countryCode = "32", string areaCode = "20")
+            {
+                string res = string.Empty;
+
+                if (plus == true)
+                {
+                    res += "+";
+                }
+
+                res += $"{countryCode} {areaCode}";
+
+                return res += " ########".RandomStringPatternGenerator(ConversionTypes.Numerical);
             }
         }
 
