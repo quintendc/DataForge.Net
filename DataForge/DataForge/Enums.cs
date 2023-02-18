@@ -10,4 +10,11 @@ namespace DataForge
         Female,
         Neutral,
     }
+
+    public enum ConversionTypes
+    {
+        Numerical,
+        Alphabetical,
+        Both,
+    }
 }
