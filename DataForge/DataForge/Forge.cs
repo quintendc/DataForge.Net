@@ -94,7 +94,7 @@ namespace DataForge
             /// Generate random address line without city and zipcode.
             /// </summary>
             /// <param name="includeNumber">include house number</param>
-            /// <returns>Random Address</returns>
+            /// <returns>random street</returns>
             public static string RandomStreet(bool includeNumber = false)
             {
                 int number = random.Next(0, 101);
@@ -107,6 +107,15 @@ namespace DataForge
                 }
 
                 return result;
+            }
+
+            /// <summary>
+            /// Generate a ranom city
+            /// </summary>
+            /// <returns>random city name</returns>
+            public static string RandomCity()
+            {
+                return DataStore.cities[random.Next(DataStore.cities.Length)];
             }
         }
 
