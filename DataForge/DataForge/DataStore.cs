@@ -21,5 +21,7 @@ namespace DataForge
 
         internal static readonly string[] emailDomains = new string[] { "gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "aol.com", "icloud.com", "protonmail.com", "yandex.com", "mail.com", "gmx.com", "zoho.com", "tutanota.com", "live.com", "fastmail.com", "hushmail.com", "inbox.com", "aim.com", "mail.ru", "gmx.us", "me.com", "netscape.net", "comcast.net", "verizon.net", "sbcglobal.net", "att.net", "charter.net", "earthlink.net", "cox.net", "qq.com", "sina.com" };
 
+        internal static readonly string[] randomWords = new string[] { "cool", "happy", "sunny", "quick", "bright", "easy", "fast", "smart", "fresh", "lucky", "strong", "free", "fun", "hot", "sweet", "kind", "young", "wise", "nice", "true", "real", "big", "blue", "red", "green", "black", "white", "purple", "orange", "yellow", "golden", "silver", "cosmic", "dreamy", "dynamic", "energetic", "fantastic", "fabulous", "groovy" };
+
     }
 }

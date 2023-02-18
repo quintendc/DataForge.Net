@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataForge
 {
-    internal enum Genders
+    public enum DataForgeGenders
     {
         Male,
         Female,
