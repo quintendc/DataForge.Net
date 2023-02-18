@@ -38,7 +38,15 @@ namespace DataForge
             {
                 return DataStore.lastNames[random.Next(DataStore.lastNames.Length)];
             }
+        }
 
+        public static class Address
+        {
+            /// <summary>
+            /// Generate random address line without city and zipcode.
+            /// </summary>
+            /// <param name="includeNumber">include house number</param>
+            /// <returns>Random Address</returns>
             public static string RandomStreet(bool includeNumber = false)
             {
                 int number = random.Next(0, 101);

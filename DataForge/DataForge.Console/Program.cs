@@ -7,8 +7,8 @@ Console.WriteLine("Random female firstname : " + Forge.Person.RandomFirstname(Da
 
 Console.WriteLine("Random lastname : " + Forge.Person.RandomLastname());
 
-Console.WriteLine("Random street : " + Forge.Person.RandomStreet());
-Console.WriteLine("Random street : " + Forge.Person.RandomStreet(true));
+Console.WriteLine("Random street : " + Forge.Address.RandomStreet());
+Console.WriteLine("Random street : " + Forge.Address.RandomStreet(true));
 
 Console.WriteLine("Random Email Addresss without input : " + Forge.Communication.RandomEmailAddress());
 Console.WriteLine("Random Email Addresss with input : " + Forge.Communication.RandomEmailAddress("Quinten", "De Clerck"));
@@ -43,3 +43,4 @@ Console.WriteLine($"person 1 : {person1.FirstName} {person1.LastName}");
 
 Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber());
 Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true));
+Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true, "123", "45"));
