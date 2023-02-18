@@ -2,8 +2,8 @@
 using DataForge.Console;
 
 Console.WriteLine("Random firstname : " + Forge.Person.RandomFirstname());
-Console.WriteLine("Random male firstname : " + Forge.Person.RandomFirstname(DataForgeGenders.Male));
-Console.WriteLine("Random female firstname : " + Forge.Person.RandomFirstname(DataForgeGenders.Female));
+Console.WriteLine("Random male firstname : " + Forge.Person.RandomFirstname(Genders.Male));
+Console.WriteLine("Random female firstname : " + Forge.Person.RandomFirstname("FEMALE"));
 
 Console.WriteLine("Random lastname : " + Forge.Person.RandomLastname());
 
@@ -31,7 +31,7 @@ ConversionTypes randomEnumValue = ConversionTypes.Numerical.GetRandomEnumValue()
 ConversionTypes type = ForgeUtils.GetRandomEnumValue<ConversionTypes>();
 Console.WriteLine("Random enum value : " + type);
 
-Person person = new Person().Forge().RuleFor(p => p.FirstName = Forge.Person.RandomFirstname(DataForgeGenders.Male)).Build();
+Person person = new Person().Forge().RuleFor(p => p.FirstName = Forge.Person.RandomFirstname("MALE")).Build();
 Console.WriteLine("Person firstname : " + person.FirstName);
 
 Person person1 = new Person().Forge().RuleFor(p => {
