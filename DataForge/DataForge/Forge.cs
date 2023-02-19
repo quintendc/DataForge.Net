@@ -15,7 +15,7 @@ namespace DataForge
         {
 
             /// <summary>
-            /// Generate a ranodm firstname based on gender: MALE, FEMALE or NEUTRAL.
+            /// Generate a random firstname based on gender: MALE, FEMALE or NEUTRAL.
             /// </summary>
             /// <param name="gender">Generate a female name or male name, by default it will return a neutral name.</param>
             /// <returns>random firstname</returns>
@@ -33,7 +33,7 @@ namespace DataForge
             }
 
             /// <summary>
-            /// Generate a ranodm firstname based on gender: MALE, FEMALE or NEUTRAL.
+            /// Generate a random firstname based on gender: MALE, FEMALE or NEUTRAL.
             /// </summary>
             /// <param name="gender">Generate a female name or male name, by default it will return a neutral name.</param>
             /// <returns>random firstname</returns>
