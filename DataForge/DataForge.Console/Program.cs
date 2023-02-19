@@ -67,3 +67,5 @@ Console.WriteLine(new DateTime().GenerateRandomDateTimeBetweenYears(1000, 2000))
 List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
 int randomElement = numbers.RandomElement();
 Console.WriteLine("random collection element : " + randomElement);
+
+Console.WriteLine("random text: " + Forge.Text.GenerateRandomText(10));
