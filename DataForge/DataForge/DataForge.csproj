@@ -6,6 +6,17 @@
     <Description>Generate random data for you .net project.</Description>
     <PackageId>DataForge.Net</PackageId>
 	<PackageVersion>2.0.0</PackageVersion>
+	<PackageProjectUrl>https://quintendc.github.io/DataForge.Net</PackageProjectUrl>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageTags>data;generator;library</PackageTags>
+	<RepositoryType>git</RepositoryType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
