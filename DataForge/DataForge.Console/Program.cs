@@ -14,8 +14,8 @@ Console.WriteLine("Random Email Addresss without input : " + Forge.Communication
 Console.WriteLine("Random Email Addresss with input : " + Forge.Communication.RandomEmailAddress("Quinten", "De Clerck"));
 Console.WriteLine("Random Email Addresss with single input : " + Forge.Communication.RandomEmailAddress("Quinten"));
 
-Console.WriteLine("Random text : " + "".RandomText());
-Console.WriteLine("Random text : " + String.Empty.RandomText(100));
+Console.WriteLine("Random text : " + "".GenerateRandomText());
+Console.WriteLine("Random text : " + String.Empty.GenerateRandomText(100));
 
 
 Console.WriteLine("Random converion with pattern : " + "##-##".RandomStringPatternGenerator(ConversionTypes.Numerical));
@@ -24,11 +24,11 @@ Console.WriteLine("Random converion with pattern : " + "##-#######".RandomString
 
 Console.WriteLine("Random Phone number : " + "+32 ## ## ### ###".RandomStringPatternGenerator(ConversionTypes.Numerical));
 
-Console.WriteLine("Random string based on pattern : " + ForgeUtils.RandomStringPattern("###-#-###", ConversionTypes.Numerical));
+Console.WriteLine("Random string based on pattern : " + Forge.Utils.RandomStringPattern("###-#-###", ConversionTypes.Numerical));
 
 
 ConversionTypes randomEnumValue = ConversionTypes.Numerical.GetRandomEnumValue();
-ConversionTypes type = ForgeUtils.GetRandomEnumValue<ConversionTypes>();
+ConversionTypes type = Forge.Utils.GetRandomEnumValue<ConversionTypes>();
 Console.WriteLine("Random enum value : " + type);
 
 Person person = new Person().Forge().RuleFor(p => p.FirstName = Forge.Person.RandomFirstname("MALE")).Build();
@@ -68,4 +68,4 @@ List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
 int randomElement = numbers.RandomElement();
 Console.WriteLine("random collection element : " + randomElement);
 
-Console.WriteLine("random text: " + Forge.Text.GenerateRandomText(10));
+Console.WriteLine("random text: " + "".GenerateRandomText(10));

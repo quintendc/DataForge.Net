@@ -16,20 +16,9 @@ namespace DataForge
         /// <param name="sourceText">if empty random words will be generated, else it will generate a random text of the words in the source text.</param>
         /// <param name="length">numbers of words in the generated text.</param>
         /// <returns>random text</returns>
-        public static string RandomText(this string sourceText, int length = 10)
+        public static string GenerateRandomText(this string sourceText, int length = 10)
         {
-            if (String.IsNullOrEmpty(sourceText))
-            {
-                sourceText = DataStore.loremIpsum;
-            }
-
-            string[] words = sourceText.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-
-            var selectedWords = Enumerable.Range(0, length)
-                .Select(i => words[random.Next(words.Length)])
-                .ToList();
-
-            return string.Join(" ", selectedWords);
+            return Forge.Text.GenerateRandomText(length);
         }
 
 
