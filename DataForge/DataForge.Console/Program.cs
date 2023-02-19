@@ -53,3 +53,12 @@ Console.WriteLine($"person 2: {person2.FirstName} {person2.LastName}");
 Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber());
 Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true));
 Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true, "123", "45"));
+
+
+DateTime dt = Forge.DateTime.GenerateRandomDateTimeBetweenYears(1000, 2000);
+Console.WriteLine("Random Birthday between the years 1000 & 2000 : " + dt.ToString("dd/MMM/yyyy"));
+
+DateTime dt2 = Forge.DateTime.GenerateRandomDateTimeBetweenAges(10, 27);
+Console.WriteLine("Random birthday for between the ages 10 & 27 : " + dt2.ToString("dd/MMM/yyyy"));
+
+Console.WriteLine(new DateTime().GenerateRandomDateTimeBetweenYears(1000, 2000));
