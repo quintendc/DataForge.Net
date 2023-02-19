@@ -62,3 +62,8 @@ DateTime dt2 = Forge.DateTime.GenerateRandomDateTimeBetweenAges(10, 27);
 Console.WriteLine("Random birthday for between the ages 10 & 27 : " + dt2.ToString("dd/MMM/yyyy"));
 
 Console.WriteLine(new DateTime().GenerateRandomDateTimeBetweenYears(1000, 2000));
+
+
+List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+int randomElement = numbers.RandomElement();
+Console.WriteLine("random collection element : " + randomElement);
