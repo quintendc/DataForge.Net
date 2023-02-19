@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataForge
 {
-    public static class ForgerStringExtensions
+    public static class ForgeStringExtensions
     {
 
         private static Random random = new Random();
@@ -16,20 +16,9 @@ namespace DataForge
         /// <param name="sourceText">if empty random words will be generated, else it will generate a random text of the words in the source text.</param>
         /// <param name="length">numbers of words in the generated text.</param>
         /// <returns>random text</returns>
-        public static string RandomText(this string sourceText, int length = 10)
+        public static string GenerateRandomText(this string sourceText, int length = 10)
         {
-            if (String.IsNullOrEmpty(sourceText))
-            {
-                sourceText = DataStore.loremIpsum;
-            }
-
-            string[] words = sourceText.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-
-            var selectedWords = Enumerable.Range(0, length)
-                .Select(i => words[random.Next(words.Length)])
-                .ToList();
-
-            return string.Join(" ", selectedWords);
+            return Forge.Text.GenerateRandomText(length);
         }
 
 
@@ -39,7 +28,7 @@ namespace DataForge
         /// <param name="sourceText">input pattern, every hashtag will be replaced</param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        public static string StringPatternGenerator(this string sourceText, ConversionTypes characterTypes)
+        public static string RandomStringPatternGenerator(this string sourceText, ConversionTypes characterTypes)
         {
             if (string.IsNullOrWhiteSpace(sourceText) || string.IsNullOrEmpty(sourceText))
             {

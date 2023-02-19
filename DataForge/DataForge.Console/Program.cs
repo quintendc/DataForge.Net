@@ -1,42 +1,71 @@
 ﻿using DataForge;
 using DataForge.Console;
 
-Console.WriteLine("Random firstname : " + Forger.RandomFirstname());
-Console.WriteLine("Random male firstname : " + Forger.RandomFirstname(DataForgeGenders.Male));
-Console.WriteLine("Random female firstname : " + Forger.RandomFirstname(DataForgeGenders.Female));
+Console.WriteLine("Random firstname : " + Forge.Person.RandomFirstname());
+Console.WriteLine("Random male firstname : " + Forge.Person.RandomFirstname(Genders.Male));
+Console.WriteLine("Random female firstname : " + Forge.Person.RandomFirstname("FEMALE"));
 
-Console.WriteLine("Random lastname : " + Forger.RandomLastname());
+Console.WriteLine("Random lastname : " + Forge.Person.RandomLastname());
 
-Console.WriteLine("Random street : " + Forger.RandomStreet());
-Console.WriteLine("Random street : " + Forger.RandomStreet(true));
+Console.WriteLine("Random street : " + Forge.Address.RandomStreet());
+Console.WriteLine("Random street : " + Forge.Address.RandomStreet(true));
 
-Console.WriteLine("Random Email Addresss without input : " + Forger.RandomEmailAddress());
-Console.WriteLine("Random Email Addresss with input : " + Forger.RandomEmailAddress("Quinten", "De Clerck"));
-Console.WriteLine("Random Email Addresss with single input : " + Forger.RandomEmailAddress("Quinten"));
+Console.WriteLine("Random Email Addresss without input : " + Forge.Communication.RandomEmailAddress());
+Console.WriteLine("Random Email Addresss with input : " + Forge.Communication.RandomEmailAddress("Quinten", "De Clerck"));
+Console.WriteLine("Random Email Addresss with single input : " + Forge.Communication.RandomEmailAddress("Quinten"));
 
-Console.WriteLine("Random text : " + "".RandomText());
-Console.WriteLine("Random text : " + String.Empty.RandomText(100));
+Console.WriteLine("Random text : " + "".GenerateRandomText());
+Console.WriteLine("Random text : " + String.Empty.GenerateRandomText(100));
 
 
-Console.WriteLine("Random converion with pattern : " + "##-##".StringPatternGenerator(ConversionTypes.Numerical));
-Console.WriteLine("Random converion with pattern : " + "##-##".StringPatternGenerator(ConversionTypes.Alphabetical));
-Console.WriteLine("Random converion with pattern : " + "##-#######".StringPatternGenerator(ConversionTypes.Both));
+Console.WriteLine("Random converion with pattern : " + "##-##".RandomStringPatternGenerator(ConversionTypes.Numerical));
+Console.WriteLine("Random converion with pattern : " + "##-##".RandomStringPatternGenerator(ConversionTypes.Alphabetical));
+Console.WriteLine("Random converion with pattern : " + "##-#######".RandomStringPatternGenerator(ConversionTypes.Both));
 
-Console.WriteLine("Random Phone number : " + "+32 ## ## ### ###".StringPatternGenerator(ConversionTypes.Numerical));
+Console.WriteLine("Random Phone number : " + "+32 ## ## ### ###".RandomStringPatternGenerator(ConversionTypes.Numerical));
 
-Console.WriteLine("Random string based on pattern : " + Forger.RandomStringPattern("###-#-###", ConversionTypes.Numerical));
+Console.WriteLine("Random string based on pattern : " + Forge.Utils.RandomStringPattern("###-#-###", ConversionTypes.Numerical));
 
 
 ConversionTypes randomEnumValue = ConversionTypes.Numerical.GetRandomEnumValue();
-ConversionTypes type = ForgerUtils.GetRandomEnumValue<ConversionTypes>();
+ConversionTypes type = Forge.Utils.GetRandomEnumValue<ConversionTypes>();
 Console.WriteLine("Random enum value : " + type);
 
-Person person = new Person().Forge().RuleFor(p => p.FirstName = Forger.RandomFirstname(DataForgeGenders.Male)).Build();
+Person person = new Person().Forge().RuleFor(p => p.FirstName = Forge.Person.RandomFirstname("MALE")).Build();
 Console.WriteLine("Person firstname : " + person.FirstName);
 
 Person person1 = new Person().Forge().RuleFor(p => {
-    p.FirstName = Forger.RandomFirstname();
-    p.LastName = Forger.RandomLastname();
+    p.FirstName = Forge.Person.RandomFirstname();
+    p.LastName = Forge.Person.RandomLastname();
 }).Build();
 
+
 Console.WriteLine($"person 1 : {person1.FirstName} {person1.LastName}");
+
+Person person2 = new Person()
+{
+    FirstName = Forge.Person.RandomFirstname(),
+    LastName = Forge.Person.RandomLastname(),
+};
+
+Console.WriteLine($"person 2: {person2.FirstName} {person2.LastName}");
+
+Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber());
+Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true));
+Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true, "123", "45"));
+
+
+DateTime dt = Forge.DateTime.GenerateRandomDateTimeBetweenYears(1000, 2000);
+Console.WriteLine("Random Birthday between the years 1000 & 2000 : " + dt.ToString("dd/MMM/yyyy"));
+
+DateTime dt2 = Forge.DateTime.GenerateRandomDateTimeBetweenAges(10, 27);
+Console.WriteLine("Random birthday for between the ages 10 & 27 : " + dt2.ToString("dd/MMM/yyyy"));
+
+Console.WriteLine(new DateTime().GenerateRandomDateTimeBetweenYears(1000, 2000));
+
+
+List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+int randomElement = numbers.RandomElement();
+Console.WriteLine("random collection element : " + randomElement);
+
+Console.WriteLine("random text: " + "".GenerateRandomText(10));
