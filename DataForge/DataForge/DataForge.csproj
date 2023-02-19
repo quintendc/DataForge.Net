@@ -10,9 +10,15 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>data;generator;library</PackageTags>
 	<RepositoryType>git</RepositoryType>
+	<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
