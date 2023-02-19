@@ -5,8 +5,7 @@
     <Title>DataForge.Net</Title>
     <Description>Generate random data for you .net project.</Description>
     <PackageId>DataForge.Net</PackageId>
-    <AssemblyVersion>1.1.0</AssemblyVersion>
-    <FileVersion>1.1.0</FileVersion>
+	<PackageVersion>2.0.0</PackageVersion>
   </PropertyGroup>
 
 </Project>
