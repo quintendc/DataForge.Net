@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataForge
+namespace DataForge.Extensions
 {
     public static class ForgeCollectionExtensions
     {

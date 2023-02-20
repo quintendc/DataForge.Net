@@ -1,5 +1,6 @@
 ﻿using DataForge;
 using DataForge.Console;
+using DataForge.Extensions;
 
 Console.WriteLine("Random firstname : " + Forge.Person.RandomFirstname());
 Console.WriteLine("Random male firstname : " + Forge.Person.RandomFirstname(Genders.Male));
@@ -31,24 +32,13 @@ ConversionTypes randomEnumValue = ConversionTypes.Numerical.GetRandomEnumValue()
 ConversionTypes type = Forge.Utils.GetRandomEnumValue<ConversionTypes>();
 Console.WriteLine("Random enum value : " + type);
 
-Person person = new Person().Forge().RuleFor(p => p.FirstName = Forge.Person.RandomFirstname("MALE")).Build();
-Console.WriteLine("Person firstname : " + person.FirstName);
-
-Person person1 = new Person().Forge().RuleFor(p => {
-    p.FirstName = Forge.Person.RandomFirstname();
-    p.LastName = Forge.Person.RandomLastname();
-}).Build();
-
-
-Console.WriteLine($"person 1 : {person1.FirstName} {person1.LastName}");
-
-Person person2 = new Person()
+Person person1 = new Person()
 {
     FirstName = Forge.Person.RandomFirstname(),
     LastName = Forge.Person.RandomLastname(),
 };
 
-Console.WriteLine($"person 2: {person2.FirstName} {person2.LastName}");
+Console.WriteLine($"person 2: {person1.FirstName} {person1.LastName}");
 
 Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber());
 Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true));

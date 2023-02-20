@@ -27,7 +27,7 @@ namespace DataForge
                 int wordCount = 0;
                 while (wordCount < numWords)
                 {
-                    int index = new Random().Next(loremIpsum.Length);
+                    int index = random.Next(loremIpsum.Length);
                     sb.Append(loremIpsum[index] + " ");
                     wordCount++;
                 }
