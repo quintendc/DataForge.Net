@@ -8,6 +8,8 @@ Console.WriteLine("Random female firstname : " + Forge.Person.RandomFirstname("F
 
 Console.WriteLine("Random lastname : " + Forge.Person.RandomLastname());
 
+Console.WriteLine("Random Gender : " + Forge.Person.RandomGender());
+
 Console.WriteLine("Random street : " + Forge.Address.RandomStreet());
 Console.WriteLine("Random street : " + Forge.Address.RandomStreet(true));
 
@@ -18,6 +20,8 @@ Console.WriteLine("Random Email Addresss with single input : " + Forge.Communica
 Console.WriteLine("Random text : " + "".GenerateRandomText());
 Console.WriteLine("Random text : " + String.Empty.GenerateRandomText(100));
 
+Console.WriteLine("Random Phone number : " + Forge.Communication.RandomPhoneNumber());
+Console.WriteLine("Random Phone number : " + Forge.Communication.RandomPhoneNumber("+334 ## ## ## ##"));
 
 Console.WriteLine("Random converion with pattern : " + "##-##".RandomStringPatternGenerator(ConversionTypes.Numerical));
 Console.WriteLine("Random converion with pattern : " + "##-##".RandomStringPatternGenerator(ConversionTypes.Alphabetical));
@@ -45,6 +49,8 @@ Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumb
 Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true, "123", "45"));
 
 
+Console.WriteLine("Random city : " + Forge.Address.RandomCity());
+
 DateTime dt = Forge.DateTime.GenerateRandomDateTimeBetweenYears(1000, 2000);
 Console.WriteLine("Random Birthday between the years 1000 & 2000 : " + dt.ToString("dd/MMM/yyyy"));
 
@@ -59,3 +65,7 @@ int randomElement = numbers.RandomElement();
 Console.WriteLine("random collection element : " + randomElement);
 
 Console.WriteLine("random text: " + "".GenerateRandomText(10));
+
+Console.WriteLine("Random text : " + Forge.Text.GenerateRandomText(10));
+
+Console.WriteLine("Random enum value : " + Forge.Utils.GetRandomEnumValue<Genders>());

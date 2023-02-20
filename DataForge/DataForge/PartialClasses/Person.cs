@@ -57,25 +57,6 @@ namespace DataForge
             }
 
             /// <summary>
-            /// Generate a random gender: MALE, FEMALE or NEUTRAL.
-            /// </summary>
-            /// <returns>random gender as string</returns>
-            public static string RandomGenderString()
-            {
-                return RandomGenderString(new[] { "MALE", "FEMALE", "NEUTRAL" });
-            }
-
-            /// <summary>
-            /// Generate a random Gender.
-            /// </summary>
-            /// <param name="genders">array of genders</param>
-            /// <returns>random gender as string</returns>
-            public static string RandomGenderString(string[] genders)
-            {
-                return genders[random.Next(DataStore.neutralNames.Length)];
-            }
-
-            /// <summary>
             /// Generate random gender.
             /// </summary>
             /// <returns>random gender as Enum value</returns>

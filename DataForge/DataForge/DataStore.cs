@@ -7,7 +7,6 @@ namespace DataForge
     internal static class DataStore
     {
 
-
         #region Person
 
         internal static readonly string[] maleNames = new string[] { "William", "Jacob", "Ethan", "Michael", "Alexander", "Daniel", "Benjamin", "Samuel", "David", "Joseph", "James", "Matthew", "Elijah", "Anthony", "Joshua", "Andrew", "Christopher", "John", "Ryan", "Nicholas", "Tyler", "Brandon", "Zachary", "Cameron", "Kevin", "Jared", "Justin", "Lucas", "Thomas", "Jonathan", "Caleb", "Nathan", "Dylan", "Adam", "Aaron", "Peter", "George", "Henry", "Oliver", "Liam" };
