@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>DataForge.Net</Title>
     <Description>Generate random data for your .NET projects.</Description>
     <PackageId>DataForge.Net</PackageId>
-	<PackageVersion>2.0.0</PackageVersion>
+	<PackageVersion>2.0.1</PackageVersion>
 	<PackageProjectUrl>https://quintendc.github.io/DataForge.Net</PackageProjectUrl>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>data;generator;library</PackageTags>
