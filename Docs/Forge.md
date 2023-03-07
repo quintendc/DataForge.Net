@@ -35,7 +35,7 @@ This method will return a random gender from the forge gender enum.
 Console.WriteLine("Random Gender : " + Forge.Person.RandomGender());
 ```
 
-## Communication
+## Communication methods
 
 ### RandomEmailAddress(string firstname = "", string lastname = "")
 The following method will return a random email address, first- and lastname are optional parameters.
@@ -60,7 +60,7 @@ Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumb
 Console.WriteLine("random phone number : " + Forge.Communication.RandomPhoneNumber(true, "123", "45"));
 ```
 
-## Address
+## Address methods
 
 ### RandomStreet(bool includeNumber = false)
 This method will generate a random street as string from a list, the include number is an optional parameter. This will add a random number to the street between 0 and 100.
@@ -75,7 +75,7 @@ This method generates a random city as string from a predefined list.
 Console.WriteLine("Random city : " + Forge.Address.RandomCity());
 ```
 
-## Text
+## Text methods
 
 ### GenerateRandomText(int numWords)
 The following method will generate a random lorem ipsum text with a number of words.
@@ -83,7 +83,7 @@ The following method will generate a random lorem ipsum text with a number of wo
 Console.WriteLine("Random text : " + Forge.Text.GenerateRandomText(10));
 ```
 
-## DateTime
+## DateTime methods
 
 ### GenerateRandomDateTimeBetweenYears(int startYear, int endYear)
 This method will generate a random DateTime between a range of years.
@@ -110,4 +110,28 @@ Console.WriteLine("Random enum value : " + Forge.Utils.GetRandomEnumValue<Gender
 The following method generate a random string value with the pattern provided, the pattern must use `#` as placeholders, the ConversionTypes enum will generate the pattern with numbers, characters or both.
 ```csharp
 Console.WriteLine("Random string based on pattern : " + Forge.Utils.RandomStringPattern("###-#-###", ConversionTypes.Numerical));
+```
+
+
+## Forge Methods
+
+### CreateInstance
+This method method will create a single instance of any kind of object.
+```csharp
+Person newPerson = Forge.CreateInstance<Person>(p =>
+{
+    p.FirstName = Forge.Person.RandomFirstname();
+    p.LastName = Forge.Person.RandomLastname();
+});
+```
+
+
+### CreateInstances
+The following method will create a list of instances of the specified object.
+```csharp
+List<Person> persons = Forge.CreateInstances<Person>(10, p =>
+{
+    p.FirstName = Forge.Person.RandomFirstname();
+    p.LastName = Forge.Person.RandomLastname();
+});
 ```

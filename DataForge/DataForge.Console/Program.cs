@@ -69,3 +69,23 @@ Console.WriteLine("random text: " + "".GenerateRandomText(10));
 Console.WriteLine("Random text : " + Forge.Text.GenerateRandomText(10));
 
 Console.WriteLine("Random enum value : " + Forge.Utils.GetRandomEnumValue<Genders>());
+
+
+Console.WriteLine(" --------------- list -----------------");
+
+List<Person> persons = Forge.CreateInstances<Person>(10, p =>
+{
+    p.FirstName = Forge.Person.RandomFirstname();
+    p.LastName = Forge.Person.RandomLastname();
+});
+
+Person newPerson = Forge.CreateInstance<Person>(p =>
+{
+    p.FirstName = Forge.Person.RandomFirstname();
+    p.LastName = Forge.Person.RandomLastname();
+});
+
+foreach (var person in persons)
+{
+    Console.WriteLine($"firstname: {person.FirstName}, lastname: {person.LastName}");
+}

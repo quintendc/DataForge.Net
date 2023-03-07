@@ -5,7 +5,7 @@
     <Title>DataForge.Net</Title>
     <Description>Generate random data for your .NET projects.</Description>
     <PackageId>DataForge.Net</PackageId>
-	<PackageVersion>2.0.1</PackageVersion>
+	<PackageVersion>2.1.0</PackageVersion>
 	<PackageProjectUrl>https://quintendc.github.io/DataForge.Net</PackageProjectUrl>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>data;generator;library</PackageTags>
